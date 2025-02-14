@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c548005465509740aea9577fb15ed77, type: 3}
+  m_Name: Player
+  m_EditorClassIdentifier: 
+  maxHp: 1
+  damage: 1
+  moveSpeed: 5
+  attackCoolTime: 1
+  hitInvincibilityTime: 1
+  dashInvincibilityTime: 1
+  dashCoolTime: 2
+  dashTime: 0.2
+  dashSpeed: 20
+  jumpPower: 5
