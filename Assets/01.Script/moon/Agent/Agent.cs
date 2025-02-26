@@ -18,6 +18,7 @@ public abstract class Agent : MonoBehaviour , IHittable
     public AgentAnimation AniCompo { get; protected set; }
     public GroundChecker GroundCheckCompo { get; protected set; }
     public AgentData dataCompo;
+    public AgentWeapon weaponCompo;
     public Health HealthCompo { get; protected set; }
     public AgentFlip FilpCompo { get; protected set; }
     #endregion
@@ -41,7 +42,7 @@ public abstract class Agent : MonoBehaviour , IHittable
         GroundCheckCompo = GetComponentInChildren<GroundChecker>();
         FilpCompo = GetComponentInChildren<AgentFlip>();
         myTra = transform;
-        timer = dataCompo.attackCoolTime;
+        timer = weaponCompo.attackCoolTime;
         speed = dataCompo.moveSpeed;
         InitializeState();
     }
@@ -55,7 +56,7 @@ public abstract class Agent : MonoBehaviour , IHittable
         if(timer <= 0)
         {
             TransitionState(StateType.Attack);
-            timer = dataCompo.attackCoolTime;
+            timer = weaponCompo.attackCoolTime;   
         }
     }
 
