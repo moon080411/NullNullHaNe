@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IHittable
 {
-    void GetHit(int damage);
+    void GetHit(int damage, bool ignoreInvincibility, ElementType element, Agent AttackPlayer);
 }

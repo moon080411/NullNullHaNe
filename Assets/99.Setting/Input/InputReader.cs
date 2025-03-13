@@ -13,6 +13,8 @@ public class InputReader : ScriptableObject, IPlayerActions
     public event Action<Vector2> OnMoveEvent;
     public event Action OnDashEvent;
     public event Action OnHookEvent;
+    public event Action OnSwitchEvent;
+    public event Action OnSkillEvent;
     private Input _playerInputAction;
     private void OnEnable()
     {
@@ -57,6 +59,22 @@ public class InputReader : ScriptableObject, IPlayerActions
         if (context.performed)
         {
             OnHookEvent?.Invoke();
+        }
+    }
+
+    public void OnSwitch(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            OnSwitchEvent?.Invoke();
+        }
+    }
+
+    public void OnSkill(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            OnSkillEvent?.Invoke();
         }
     }
 }

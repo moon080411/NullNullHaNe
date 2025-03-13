@@ -22,6 +22,22 @@ public class Health : MonoBehaviour
     {
         this.health = health;
     }
+    public void Healing(int health)
+    {
+        this.health += health;
+        if(this.health > maxHelth)
+        {
+            maxHelth = health;
+        }
+    }
+    public void HealingPercent(int health)
+    {
+        this.health += Mathf.RoundToInt(maxHelth*(health/100));
+        if(this.health > maxHelth)
+        {
+            maxHelth = health;
+        }
+    }
     public int GetMaxHealth()
     {
         return maxHelth;

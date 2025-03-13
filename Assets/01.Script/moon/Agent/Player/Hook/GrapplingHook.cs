@@ -47,6 +47,10 @@ public class GrapplingHook : MonoBehaviour
             }
         }
     }
+    public void LineMax()
+    {
+        isLineMax = true;
+    }
     public void Hook()
     {
         if (!isHookActive)

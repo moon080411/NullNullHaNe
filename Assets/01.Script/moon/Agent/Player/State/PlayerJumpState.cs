@@ -12,6 +12,10 @@ public class PlayerJumpState : PlayerMoveState
         base.EnterState();
         _agent.RbCompo.AddForce(Vector3.up * _agent.DataCompo.jumpPower, ForceMode2D.Impulse);
     }
+    public override void StateUpdate()
+    {
+
+    }
     public override void StateFixedUpdate()
     {
         base.StateFixedUpdate();

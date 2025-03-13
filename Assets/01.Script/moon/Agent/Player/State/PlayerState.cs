@@ -36,7 +36,7 @@ public abstract class PlayerState : State
     {
         if(_agent.DashTime <= 0)
         {
-            _agent.TransitionState(StateType.Dash);
+            _agent.TransitionState(PlayerStateType.Dash);
         }
     }
     protected virtual void Move(Vector2 dir)

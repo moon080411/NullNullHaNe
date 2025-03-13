@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   maxHp: 1
-  damage: 1
   moveSpeed: 5
-  attackCoolTime: 1
   hitInvincibilityTime: 1
   dashInvincibilityTime: 1
   dashCoolTime: 2
   dashTime: 0.2
   dashSpeed: 20
   jumpPower: 5
+  RotationTime: 5.28
+  RotationSpeed: 1.47
+  RotationRadius: 1.24
+  RotationCoolTime: 0

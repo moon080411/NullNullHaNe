@@ -10,4 +10,8 @@ public class PlayerData : AgentData
     public float dashTime;
     public float dashSpeed;
     public float jumpPower;
+    public float RotationTime;
+    public float RotationSpeed;
+    public float RotationRadius;
+    public float RotationCoolTime;
 }

@@ -13,6 +13,14 @@ public class PlayerMoveState : PlayerState
     {
         base.EnterState();
     }
+    public override void StateUpdate()
+    {
+        base.StateUpdate();
+        if (Mathf.Abs(_agent.RbCompo.velocity.x) < 0.01f)
+        {
+            _agent.TransitionState(StateType.Idle);
+        }
+    }
     public override void StateFixedUpdate()
     {
         base.StateFixedUpdate();
